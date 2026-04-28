@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sameer | Production Ecosystem</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons for premium scalable graphics -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Configuration for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            400: '#34d399', // Emerald 400
+                            500: '#10b981', // Emerald 500
+                            600: '#059669', // Emerald 600
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0f172a; /* Deep slate background */
+            color: #f8fafc;
+        }
+        /* Custom gradient text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #34d399, #3b82f6);
+        }
+        /* Card hover glow effect */
+        .hub-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.1), 0 8px 10px -6px rgba(16, 185, 129, 0.1);
+            border-color: rgba(52, 211, 153, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen relative overflow-x-hidden">
+
+    <!-- Background decorative elements -->
+    <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-brand-600/20 blur-[120px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/20 blur-[120px] pointer-events-none z-0"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl font-bold tracking-tighter text-white">Sameer<span class="text-brand-500">.</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-white hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#ecosystem" class="text-slate-300 hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Ecosystem</a>
+                        <a href="https://sameer-playz.github.io/MinecraftProduction/" target="_blank" class="text-slate-300 hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Studio</a>
+                        <a href="#contact" class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all transform hover:scale-105 shadow-lg shadow-brand-500/30">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative z-10 pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 flex flex-col items-center justify-center min-h-[90vh] text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 text-brand-400 text-sm font-medium mb-8">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Welcome to the Hub</span>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 max-w-4xl mx-auto leading-tight text-white">
+            Building Seamless <br />
+            <span class="text-gradient">Production Experiences.</span>
+        </h1>
+        
+        <p class="mt-4 max-w-2xl text-lg md:text-xl text-slate-400 mx-auto mb-10 leading-relaxed">
+            A complete ecosystem spanning studio management, staff directories, operational frameworks, and content logistics. Everything connected, everything optimized.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#ecosystem" class="w-full sm:w-auto px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white rounded-full font-semibold text-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2">
+                Explore the Network
+                <i data-lucide="arrow-down" class="w-5 h-5"></i>
+            </a>
+            <a href="https://sameer-playz.github.io/MinecraftProduction/" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-full font-semibold text-lg transition-all flex items-center justify-center gap-2">
+                Visit Main Studio
+                <i data-lucide="external-link" class="w-5 h-5 text-slate-400"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- The Ecosystem Grid -->
+    <section id="ecosystem" class="relative z-10 py-20 bg-slate-900/50 border-t border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The Complete Infrastructure</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Navigate through the specialized wings of my operations. Each site serves a distinct purpose in the overall workflow.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Main Production -->
+                <div class="hub-card group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 transition-all duration-300 flex flex-col h-full">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/20 flex items-center justify-center mb-6 border border-brand-500/30 text-brand-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="monitor-play" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Minecraft Production</h3>
+                    <p class="text-slate-400 mb-8 flex-grow">The core landing hub and visual showcase for content. The creative engine where the primary public-facing media is hosted.</p>
+                    <a href="https://sameer-playz.github.io/MinecraftProduction/" target="_blank" class="inline-flex items-center gap-2 text-brand-400 font-semibold hover:text-brand-300 transition-colors w-max">
+                        Enter Studio Workspace
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Staff Directory -->
+                <div class="hub-card group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 transition-all duration-300 flex flex-col h-full">
+                    <div class="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6 border border-blue-500/30 text-blue-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Staff Directory</h3>
+                    <p class="text-slate-400 mb-8 flex-grow">The human element. An organized database detailing the team members, roles, and structural hierarchy of our operations.</p>
+                    <a href="https://sameer-playz.github.io/Staff/" target="_blank" class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:text-blue-300 transition-colors w-max">
+                        Meet the Team
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Framework -->
+                <div class="hub-card group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 transition-all duration-300 flex flex-col h-full">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/20 flex items-center justify-center mb-6 border border-purple-500/30 text-purple-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">The Framework</h3>
+                    <p class="text-slate-400 mb-8 flex-grow">The technical backbone. Outlining the systems, protocols, and architectural foundations that keep our projects running smoothly.</p>
+                    <a href="https://sameer-playz.github.io/Framework/" target="_blank" class="inline-flex items-center gap-2 text-purple-400 font-semibold hover:text-purple-300 transition-colors w-max">
+                        View System Architecture
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Content Logistics -->
+                <div class="hub-card group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 transition-all duration-300 flex flex-col h-full">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500/20 flex items-center justify-center mb-6 border border-amber-500/30 text-amber-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="boxes" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Content Logistics</h3>
+                    <p class="text-slate-400 mb-8 flex-grow">The operational pipeline. Tracking distribution, content pipelines, asset management, and day-to-day workflow tracking.</p>
+                    <a href="https://sameer-playz.github.io/Content-Logistics/" target="_blank" class="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors w-max">
+                        Explore Logistics Pipeline
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners / Collaborations Section -->
+    <section id="partners" class="relative z-10 py-16 px-6">
+        <div class="max-w-4xl mx-auto flex flex-col gap-8">
+            
+            <!-- Zaemon Collaboration Box -->
+            <div class="bg-slate-800/40 border border-slate-700 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 transition-all hover:bg-slate-800/60">
+                <div class="flex-shrink-0 relative group">
+                    <div class="absolute inset-0 bg-brand-500 blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <a href="https://youtube.com/@zaemonspy" target="_blank" class="block relative w-32 h-32 rounded-full border-4 border-slate-700 p-1 overflow-hidden bg-slate-900 shadow-2xl transition-transform hover:scale-105 active:scale-95">
+                        <img 
+                            src="https://yt3.googleusercontent.com/B94U8Z4Vp2L4S2lM4F1V7Q1v0m5L1V6p7v8n9N0M-Xw=s176-c-k-c0x00ffffff-no-rj" 
+                            alt="Zaemon" 
+                            class="w-full h-full rounded-full object-cover"
+                            onerror="this.src='https://ui-avatars.com/api/?name=Zaemon&background=10b981&color=fff&size=256'"
+                        />
+                    </a>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-white mb-2">Primary Collaboration</h3>
+                    <p class="text-slate-300 text-lg mb-4">
+                        I am currently working with <span class="text-brand-400 font-bold">Zaemon</span>, a prominent creator with <span class="font-semibold text-white">12.8k+ subscribers</span>. 
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <div class="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-lg text-indigo-400">
+                            <i data-lucide="message-square" class="w-4 h-4"></i>
+                            <span class="text-sm font-medium">1.6k+ Discord Members</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-brand-500/10 border border-brand-500/30 rounded-lg text-brand-400">
+                            <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            <span class="text-sm font-medium">Official Server Moderator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stevee Collaboration Box -->
+            <div class="bg-slate-800/40 border border-slate-700 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 transition-all hover:bg-slate-800/60">
+                <div class="flex-shrink-0 relative group">
+                    <div class="absolute inset-0 bg-blue-500 blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <a href="https://youtube.com/@notstevee69" target="_blank" class="block relative w-32 h-32 rounded-full border-4 border-slate-700 p-1 overflow-hidden bg-slate-900 shadow-2xl transition-transform hover:scale-105 active:scale-95">
+                        <img 
+                            src="https://ui-avatars.com/api/?name=Stevee&background=3b82f6&color=fff&size=256" 
+                            alt="Stevee" 
+                            class="w-full h-full rounded-full object-cover"
+                        />
+                    </a>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-white mb-2">Major Collaboration</h3>
+                    <p class="text-slate-300 text-lg mb-4">
+                        I am also working with <span class="text-blue-400 font-bold">Stevee</span>, a massive creator with <span class="font-semibold text-white">200k+ subscribers</span>. 
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <div class="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-lg text-indigo-400">
+                            <i data-lucide="message-square" class="w-4 h-4"></i>
+                            <span class="text-sm font-medium">1k+ Discord Members</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-400">
+                            <i data-lucide="star" class="w-4 h-4"></i>
+                            <span class="text-sm font-medium">Staff Team Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SKYPi Rec Server Management Box -->
+            <div class="bg-slate-800/40 border border-slate-700 rounded-3xl p-8 md:p-10 flex flex-col gap-8 transition-all hover:bg-slate-800/60">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-shrink-0 relative group">
+                        <div class="absolute inset-0 bg-purple-500 blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                        <div class="relative w-32 h-32 rounded-3xl border-4 border-slate-700 flex items-center justify-center bg-slate-900 shadow-2xl">
+                            <i data-lucide="server" class="w-16 h-16 text-purple-400"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-white mb-2 text-gradient">SKYPi Rec Server Management</h3>
+                        <p class="text-slate-300 text-lg mb-4">
+                            Currently serving as the <span class="text-white font-bold">Rec Manager</span> for the SKYPi network, managing a high-profile creator ecosystem.
+                        </p>
+                        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                            <div class="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-lg text-indigo-400">
+                                <i data-lucide="users" class="w-4 h-4"></i>
+                                <span class="text-sm font-medium">1.6k+ Members</span>
+                            </div>
+                            <div class="flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-lg text-purple-400">
+                                <i data-lucide="user-cog" class="w-4 h-4"></i>
+                                <span class="text-sm font-medium">Rec Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-slate-700/50 pt-8">
+                    <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-700 flex flex-col items-center text-center">
+                        <span class="text-brand-400 font-bold text-2xl">2-3</span>
+                        <span class="text-slate-400 text-xs uppercase tracking-widest mt-1">Elite Tier</span>
+                        <span class="text-white font-semibold text-sm mt-2">1 Million+ Subs</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-700 flex flex-col items-center text-center">
+                        <span class="text-blue-400 font-bold text-2xl">3-4</span>
+                        <span class="text-slate-400 text-xs uppercase tracking-widest mt-1">Mid-High Tier</span>
+                        <span class="text-white font-semibold text-sm mt-2">100K+ Subs</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-700 flex flex-col items-center text-center">
+                        <span class="text-amber-400 font-bold text-2xl">5-6</span>
+                        <span class="text-slate-400 text-xs uppercase tracking-widest mt-1">Growing Tier</span>
+                        <span class="text-white font-semibold text-sm mt-2">10-20K+ Subs</span>
+                    </div>
+                </div>
+
+                <div class="mt-2 flex justify-center md:justify-end">
+                    <a href="https://discord.gg/UBjf6wbdC" target="_blank" class="inline-flex items-center gap-2 px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full text-sm font-semibold transition-all shadow-lg shadow-indigo-500/20">
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                        Join SKYPi Discord
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="relative z-10 border-t border-slate-800 bg-slate-900 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center">
+            <h2 class="text-2xl font-bold mb-6 text-white">Ready to collaborate?</h2>
+            <div class="flex gap-4 mb-8">
+                <a href="mailto:sameereditor35@gmail.com" class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-800 border border-slate-700 hover:bg-slate-700 hover:text-brand-400 hover:border-brand-500/50 transition-all text-slate-300 shadow-lg">
+                    <i data-lucide="mail" class="w-5 h-5 text-brand-400"></i>
+                    <span class="font-medium tracking-wide">sameereditor35@gmail.com</span>
+                </a>
+            </div>
+            <p class="text-slate-500 text-sm">
+                &copy; <span id="year"></span> Sameer. Built as a unified ecosystem.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            lucide.createIcons();
+            document.getElementById('year').textContent = new Date().getFullYear();
+        };
+    </script>
+</body>
+</html>
