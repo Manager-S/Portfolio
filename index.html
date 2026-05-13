@@ -51,6 +51,10 @@
             box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.1), 0 8px 10px -6px rgba(16, 185, 129, 0.1);
             border-color: rgba(52, 211, 153, 0.5);
         }
+        /* Video overlay effect */
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen relative overflow-x-hidden">
@@ -70,7 +74,7 @@
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="#home" class="text-white hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
                         <a href="#ecosystem" class="text-slate-300 hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Ecosystem</a>
-                        <a href="https://manager-s.github.io/Video/" target="_blank" class="text-slate-300 hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Studio</a>
+                        <a href="#portfolio" class="text-slate-300 hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
                         <a href="#contact" class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all transform hover:scale-105 shadow-lg shadow-brand-500/30">Get in Touch</a>
                     </div>
                 </div>
@@ -235,60 +239,121 @@
                 </div>
             </div>
 
-            <!-- SKYPi Rec Server Management Box -->
-            <div class="bg-slate-800/40 border border-slate-700 rounded-3xl p-8 md:p-10 flex flex-col gap-8 transition-all hover:bg-slate-800/60">
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-shrink-0 relative group">
-                        <div class="absolute inset-0 bg-purple-500 blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                        <div class="relative w-32 h-32 rounded-3xl border-4 border-slate-700 flex items-center justify-center bg-slate-900 shadow-2xl">
-                            <i data-lucide="server" class="w-16 h-16 text-purple-400"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center md:text-left">
-                        <h3 class="text-2xl font-bold text-white mb-2 text-gradient">SKYPi Rec Server Management</h3>
-                        <p class="text-slate-300 text-lg mb-4">
-                            Currently serving as the <span class="text-white font-bold">Rec Manager</span> for the SKYPi network, managing a high-profile creator ecosystem.
-                        </p>
-                        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                            <div class="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-lg text-indigo-400">
-                                <i data-lucide="users" class="w-4 h-4"></i>
-                                <span class="text-sm font-medium">1.6k+ Members</span>
-                            </div>
-                            <div class="flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-lg text-purple-400">
-                                <i data-lucide="user-cog" class="w-4 h-4"></i>
-                                <span class="text-sm font-medium">Rec Manager</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </section>
 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-slate-700/50 pt-8">
-                    <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-700 flex flex-col items-center text-center">
-                        <span class="text-brand-400 font-bold text-2xl">2-3</span>
-                        <span class="text-slate-400 text-xs uppercase tracking-widest mt-1">Elite Tier</span>
-                        <span class="text-white font-semibold text-sm mt-2">1 Million+ Subs</span>
-                    </div>
-                    <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-700 flex flex-col items-center text-center">
-                        <span class="text-blue-400 font-bold text-2xl">3-4</span>
-                        <span class="text-slate-400 text-xs uppercase tracking-widest mt-1">Mid-High Tier</span>
-                        <span class="text-white font-semibold text-sm mt-2">100K+ Subs</span>
-                    </div>
-                    <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-700 flex flex-col items-center text-center">
-                        <span class="text-amber-400 font-bold text-2xl">5-6</span>
-                        <span class="text-slate-400 text-xs uppercase tracking-widest mt-1">Growing Tier</span>
-                        <span class="text-white font-semibold text-sm mt-2">10-20K+ Subs</span>
-                    </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="relative z-10 py-20 bg-slate-900/80 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Production Portfolio</h2>
+                    <p class="text-slate-400 max-w-xl">Showcasing technical recording and production management for creators.</p>
                 </div>
-
-                <div class="mt-2 flex justify-center md:justify-end">
-                    <a href="https://discord.gg/UBjf6wbdC" target="_blank" class="inline-flex items-center gap-2 px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full text-sm font-semibold transition-all shadow-lg shadow-indigo-500/20">
-                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                        Join SKYPi Discord
-                    </a>
+                <div class="flex items-center gap-4 text-sm font-semibold text-slate-300">
+                    <span class="flex items-center gap-2 px-3 py-1 bg-slate-800 rounded-lg border border-slate-700">
+                        <span class="w-2 h-2 rounded-full bg-brand-500"></span> Management
+                    </span>
+                    <span class="flex items-center gap-2 px-3 py-1 bg-slate-800 rounded-lg border border-slate-700">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span> Rec Staff
+                    </span>
                 </div>
             </div>
 
+            <!-- Video Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Video Item 1 -->
+                <div class="group relative bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden transition-all hover:border-brand-500/50">
+                    <div class="aspect-video bg-slate-900 relative video-container">
+                        <img src="https://img.youtube.com/vi/L_CCjYIDaCg/maxresdefault.jpg" alt="Portfolio Video" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 video-overlay transition-opacity duration-300 bg-slate-900/60 backdrop-blur-sm">
+                            <a href="https://youtu.be/L_CCjYIDaCg" target="_blank" class="p-4 bg-white/10 rounded-full border border-white/20 hover:bg-brand-500 transition-colors">
+                                <i data-lucide="play" class="w-8 h-8 fill-white text-white"></i>
+                            </a>
+                        </div>
+                        <div class="absolute top-3 left-3 px-2 py-1 bg-brand-500 text-[10px] font-bold uppercase rounded text-white shadow-lg">
+                            Manager
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 2 -->
+                <div class="group relative bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden transition-all hover:border-blue-500/50">
+                    <div class="aspect-video bg-slate-900 relative video-container">
+                        <img src="https://img.youtube.com/vi/_c8Z_op9JDw/maxresdefault.jpg" alt="Portfolio Video" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 video-overlay transition-opacity duration-300 bg-slate-900/60 backdrop-blur-sm">
+                            <a href="https://youtu.be/_c8Z_op9JDw" target="_blank" class="p-4 bg-white/10 rounded-full border border-white/20 hover:bg-blue-500 transition-colors">
+                                <i data-lucide="play" class="w-8 h-8 fill-white text-white"></i>
+                            </a>
+                        </div>
+                        <div class="absolute top-3 left-3 px-2 py-1 bg-blue-500 text-[10px] font-bold uppercase rounded text-white shadow-lg">
+                            Rec Staff
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 3 -->
+                <div class="group relative bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden transition-all hover:border-blue-500/50">
+                    <div class="aspect-video bg-slate-900 relative video-container">
+                        <img src="https://img.youtube.com/vi/BB6cixLsKfw/maxresdefault.jpg" alt="Portfolio Video" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 video-overlay transition-opacity duration-300 bg-slate-900/60 backdrop-blur-sm">
+                            <a href="https://youtu.be/BB6cixLsKfw" target="_blank" class="p-4 bg-white/10 rounded-full border border-white/20 hover:bg-blue-500 transition-colors">
+                                <i data-lucide="play" class="w-8 h-8 fill-white text-white"></i>
+                            </a>
+                        </div>
+                        <div class="absolute top-3 left-3 px-2 py-1 bg-blue-500 text-[10px] font-bold uppercase rounded text-white shadow-lg">
+                            Rec Staff
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 4 -->
+                <div class="group relative bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden transition-all hover:border-brand-500/50">
+                    <div class="aspect-video bg-slate-900 relative video-container">
+                        <img src="https://img.youtube.com/vi/KFJHsr5_W8o/maxresdefault.jpg" alt="Portfolio Video" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 video-overlay transition-opacity duration-300 bg-slate-900/60 backdrop-blur-sm">
+                            <a href="https://youtu.be/KFJHsr5_W8o" target="_blank" class="p-4 bg-white/10 rounded-full border border-white/20 hover:bg-brand-500 transition-colors">
+                                <i data-lucide="play" class="w-8 h-8 fill-white text-white"></i>
+                            </a>
+                        </div>
+                        <div class="absolute top-3 left-3 px-2 py-1 bg-brand-500 text-[10px] font-bold uppercase rounded text-white shadow-lg">
+                            Manager
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 5 -->
+                <div class="group relative bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden transition-all hover:border-blue-500/50">
+                    <div class="aspect-video bg-slate-900 relative video-container">
+                        <img src="https://img.youtube.com/vi/B2_7wJmaz8g/maxresdefault.jpg" alt="Portfolio Video" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 video-overlay transition-opacity duration-300 bg-slate-900/60 backdrop-blur-sm">
+                            <a href="https://youtu.be/B2_7wJmaz8g" target="_blank" class="p-4 bg-white/10 rounded-full border border-white/20 hover:bg-blue-500 transition-colors">
+                                <i data-lucide="play" class="w-8 h-8 fill-white text-white"></i>
+                            </a>
+                        </div>
+                        <div class="absolute top-3 left-3 px-2 py-1 bg-blue-500 text-[10px] font-bold uppercase rounded text-white shadow-lg">
+                            Rec Staff
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Video Item 6 -->
+                <div class="group relative bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden transition-all hover:border-blue-500/50">
+                    <div class="aspect-video bg-slate-900 relative video-container">
+                        <img src="https://img.youtube.com/vi/E4sySLvxsqI/maxresdefault.jpg" alt="Portfolio Video" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 video-overlay transition-opacity duration-300 bg-slate-900/60 backdrop-blur-sm">
+                            <a href="https://youtu.be/E4sySLvxsqI" target="_blank" class="p-4 bg-white/10 rounded-full border border-white/20 hover:bg-blue-500 transition-colors">
+                                <i data-lucide="play" class="w-8 h-8 fill-white text-white"></i>
+                            </a>
+                        </div>
+                        <div class="absolute top-3 left-3 px-2 py-1 bg-blue-500 text-[10px] font-bold uppercase rounded text-white shadow-lg">
+                            Rec Staff
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
